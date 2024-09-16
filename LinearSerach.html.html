@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>DataStructure And Algorithm</title>
+</head>
+
+<body>
+     <p>Data structure is way of organizing,managing and storing data.so,that it can be accessed efficiantly</p>
+     <h1>DSA with Javascript</h1>
+     <script>
+          function LinearSerach(arr, target) {
+               for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] === target) {
+                         // return i;
+                         return { index: i, Element: arr[i] };
+                    }
+               }
+               return -1;
+          }
+          const arr = [1, 4, 5, 2, 6, 3, 8, 9];
+          const target = 8;
+          const result = LinearSerach(arr, target);
+          if (result != -1) {
+               // console.log(`The index of the target is ${result}`);
+               console.log(`The targetElement is ${result.Element} And Index is ${result.index}`);
+          } else {
+               console.log("The target Element is Not Found");
+          }
+
+     </script>
+
+</body>
+
+</html>
