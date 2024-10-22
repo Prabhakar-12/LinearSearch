@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>BinarySerach</title>
+</head>
+
+<body>
+      <p>BinarySerach is a seraching the target element in the given array.</p>
+      <h1> The Binary serach input array should be assending or Descending order</h1>
+      <h2> left is First index of the array,is always "0".Right index is always array lenght -1;;;</h2>
+      <h3>If the target Element is greater than mid index value ,It will serach right sub array.Left is equal to
+            middle+1.</h3>
+      <h4>If the target element is less than mid index value ,It will serach left sub array.Right is eqal to mid-1</h4>
+      <script>
+            function BinarySerach(arr, target) {
+                  let left = 0;
+                  let right = arr.length - 1;
+                  while (left <= right) {
+                        let middle = Math.floor((left + right) / 2);
+                        if (arr[middle] === target) {
+                              return middle;
+                        } else if (arr[middle] < target) {
+                              left = middle + 1;
+                        } else {
+                              right = middle - 1;
+                        }
+                  }
+                  return -1;
+            }
+            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            const target = 8;
+            const result = BinarySerach(arr, target);
+            if (result != -1) {
+                  console.log(`The target Element index is ${result}`);
+            } else {
+                  console.log("The targett Elment is not Found");
+            }
+      </script>
+</body>
+
+</html>
